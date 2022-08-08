@@ -31,40 +31,40 @@ const personalMovieDB = {
 
 
 
-// function rememberMyFilms (){
-//     for (let i = 0; i < 2 ; i++){
-//         const a = prompt("One of the las seen films?",'');
-//         const b = prompt("Please, rate the film",'');
+function rememberMyFilms (){
+    for (let i = 0; i < 2 ; i++){
+        const a = prompt("One of the las seen films?",'').trim();
+        const b = prompt("Please, rate the film",'');
     
-//         if (a != null && b != null && a != '' && b != '' && a.length < 50 && b.length < 50 ){
-//             personalMovieDB.movies[a] = b ; 
-//             console.log("done");
-//         }else {console.log("error");
-//                i--;
-//         }
-//     }
+        if (a != null && b != null && a != '' && b != '' && a.length < 50 && b.length < 50 ){
+            personalMovieDB.movies[a] = b ; 
+            console.log("done");
+        }else {console.log("error");
+               i--;
+        }
+    }
 
-// }
+}
 
-// rememberMyFilms();
+rememberMyFilms();
 
 
 
-// function detectPersonslLevel(){
+function detectPersonslLevel(){
 
-//     if (personalMovieDB.count < 10) {
-//         console.log ('Not enough films');
-//     } else if (personalMovieDB.count >= 10  && personalMovieDB.count < 30 ){
-//         console.log ("You are classic viewer")
-//     }else if (personalMovieDB.count >= 30){
-//         console.log ("You are cinoman")
-//     }else{console.log ("Error");
-//     }
+    if (personalMovieDB.count < 10) {
+        console.log ('Not enough films');
+    } else if (personalMovieDB.count >= 10  && personalMovieDB.count < 30 ){
+        console.log ("You are classic viewer")
+    }else if (personalMovieDB.count >= 30){
+        console.log ("You are cinoman")
+    }else{console.log ("Error");
+    }
     
 
-// }
+}
 
-// detectPersonslLevel();
+detectPersonslLevel();
 
 
 
