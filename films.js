@@ -11,9 +11,9 @@ const personalMovieDB = {
 
 };
 
-const a = prompt("One of the las seen folms?",''),
+const a = prompt("One of the last seen folms?",''),
       b = prompt("Please, rate the film",''),
-      c = prompt("One of the las seen folms?",''),
+      c = prompt("One of the last seen folms?",''),
       d = prompt("Please, rate the film",'');
 
 // movies[lastSeenFilm]= 'filmRate';
