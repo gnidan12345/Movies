@@ -18,7 +18,8 @@ const personalMovieDB = {
     actor: {},
     genres: [],
     private: false,
-    start: function(){
+
+    start: function() {
         personalMovieDB.count = +prompt("How much films have you watched?",'');
 
      while(personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)){
@@ -26,7 +27,9 @@ const personalMovieDB = {
      }
 
     },
-    rememberMyFilms: function(){
+
+   
+    rememberMyFilms: function() {
         for (let i = 0; i < 2 ; i++){
             const a = prompt("One of the last seen films?",'').trim();
             const b = prompt("Please, rate the film",'');
@@ -35,13 +38,18 @@ const personalMovieDB = {
                 personalMovieDB.movies[a] = b ; 
                 console.log("done");
             }else {console.log("error");
-                   i--;
+                   i--;//return to previous question
             }
         }
 
+  
+
     },
 
-    detectPersonslLevel: function(){
+
+    
+
+    detectPersonslLevel: function() {
 
         if (personalMovieDB.count < 10) {
             console.log ('Not enough films');
@@ -51,7 +59,7 @@ const personalMovieDB = {
             console.log ("You are cinoman")
         }else{console.log ("Error");
         }
-
+     
     },
 
     showMyDB: function(hidden){
@@ -62,7 +70,7 @@ const personalMovieDB = {
             console.log('error');
         }
     
-
+    
     },
 
 
@@ -73,6 +81,8 @@ const personalMovieDB = {
         }else{
             personalMovieDB.private = true;
         }
+
+
     },
 
     // writeYourGenres: function(){
@@ -101,7 +111,7 @@ const personalMovieDB = {
             let genres = prompt(`Put favorite genres using coma`).toLowerCase();
             
             if(genres === '' || genres == null){
-                console.log ('Вы ааели некорректные данные');
+                console.log ('Вы ввели некорректные данные');
                 i--;
 
             }else {
@@ -116,22 +126,30 @@ const personalMovieDB = {
             console.log(`Любимый жанр ${i+1}  - это ${item}`);
         });
 
+   
+
     }
 
 
+  
+   
+    
 
 
 
 
 
+    
 
-
-
+  
 
 
 
 
 };
+
+
+
 
 
 // personalMovieDB.start();
@@ -235,4 +253,4 @@ const personalMovieDB = {
 // personalMovieDB.movies[a] = b ; 
 // personalMovieDB.movies[c] = d ;
 
-// console.log(personalMovieDB);
+// 
